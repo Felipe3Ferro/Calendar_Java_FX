@@ -1,11 +1,17 @@
 package controller;
 
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import model.EscritaLeitura;
 
 public class LayoutController {
 
@@ -19,10 +25,34 @@ public class LayoutController {
   private Button btnInicio;
 
   @FXML
+  private Label labelMesAno;
+
+  @FXML
   private Label labelSeg;
 
   @FXML
   private Button btn11;
+
+  @FXML
+  private Label label1;
+
+  @FXML
+  private Label label2;
+
+  @FXML
+  private Label label3;
+
+  @FXML
+  private Label label4;
+
+  @FXML
+  private Label label5;
+
+  @FXML
+  private Label label6;
+
+  @FXML
+  private Label label7;
 
   @FXML
   private Label label11;
@@ -432,6 +462,7 @@ public class LayoutController {
   @FXML
   void initialize() {
     assert btnInicio != null : "fx:id=\"btnInicio\" was not injected: check your FXML file 'layout.fxml'.";
+    assert labelMesAno != null : "fx:id=\"labelMesAno\" was not injected: check your FXML file 'layout.fxml'.";
     assert labelSeg != null : "fx:id=\"labelSeg\" was not injected: check your FXML file 'layout.fxml'.";
     assert btn11 != null : "fx:id=\"btn11\" was not injected: check your FXML file 'layout.fxml'.";
     assert label11 != null : "fx:id=\"label11\" was not injected: check your FXML file 'layout.fxml'.";
@@ -509,6 +540,136 @@ public class LayoutController {
     assert label47 != null : "fx:id=\"label47\" was not injected: check your FXML file 'layout.fxml'.";
     assert btn57 != null : "fx:id=\"btn57\" was not injected: check your FXML file 'layout.fxml'.";
     assert label57 != null : "fx:id=\"label57\" was not injected: check your FXML file 'layout.fxml'.";
+
+    // ==========================================Construção_do_calendario==================================================================
+
+    Calendar hoje = Calendar.getInstance();
+    SimpleDateFormat sdf = new SimpleDateFormat("MMMM");
+    SimpleDateFormat sdf2 = new SimpleDateFormat("E");
+
+    GregorianCalendar geradoHoje = new GregorianCalendar(hoje.get(Calendar.YEAR), hoje.get(Calendar.MONTH), 1);
+
+    int aux = 0;
+
+    for (int i = geradoHoje.get(Calendar.DAY_OF_WEEK); i >= 2; i--) {
+      aux++;
+    }
+
+    aux = hoje.get(Calendar.DAY_OF_MONTH) + aux;
+
+    geradoHoje = new GregorianCalendar(hoje.get(Calendar.YEAR), hoje.get(Calendar.MONTH),
+        (hoje.get(Calendar.DAY_OF_MONTH) - aux + 2));
+
+    labelMesAno.setText(sdf.format(hoje.getTime()));
+
+    geradoHoje = new GregorianCalendar(hoje.get(Calendar.YEAR), hoje.get(Calendar.MONTH),
+        (hoje.get(Calendar.DAY_OF_MONTH) - aux + 3));
+
+    label2.setText(sdf2.format(hoje.getTime()));
+
+    label11.setText("" + geradoHoje.get(Calendar.DAY_OF_MONTH));
+    geradoHoje = new GregorianCalendar(hoje.get(Calendar.YEAR), hoje.get(Calendar.MONTH),
+        (hoje.get(Calendar.DAY_OF_MONTH) - aux + 3));
+    label12.setText("" + geradoHoje.get(Calendar.DAY_OF_MONTH));
+    geradoHoje = new GregorianCalendar(hoje.get(Calendar.YEAR), hoje.get(Calendar.MONTH),
+        (hoje.get(Calendar.DAY_OF_MONTH) - aux + 4));
+    label13.setText("" + geradoHoje.get(Calendar.DAY_OF_MONTH));
+    geradoHoje = new GregorianCalendar(hoje.get(Calendar.YEAR), hoje.get(Calendar.MONTH),
+        (hoje.get(Calendar.DAY_OF_MONTH) - aux + 5));
+    label14.setText("" + geradoHoje.get(Calendar.DAY_OF_MONTH));
+    geradoHoje = new GregorianCalendar(hoje.get(Calendar.YEAR), hoje.get(Calendar.MONTH),
+        (hoje.get(Calendar.DAY_OF_MONTH) - aux + 6));
+    label15.setText("" + geradoHoje.get(Calendar.DAY_OF_MONTH));
+    geradoHoje = new GregorianCalendar(hoje.get(Calendar.YEAR), hoje.get(Calendar.MONTH),
+        (hoje.get(Calendar.DAY_OF_MONTH) - aux + 7));
+    label16.setText("" + geradoHoje.get(Calendar.DAY_OF_MONTH));
+    geradoHoje = new GregorianCalendar(hoje.get(Calendar.YEAR), hoje.get(Calendar.MONTH),
+        (hoje.get(Calendar.DAY_OF_MONTH) - aux + 8));
+    label17.setText("" + geradoHoje.get(Calendar.DAY_OF_MONTH));
+    geradoHoje = new GregorianCalendar(hoje.get(Calendar.YEAR), hoje.get(Calendar.MONTH),
+        (hoje.get(Calendar.DAY_OF_MONTH) - aux + 9));
+    label21.setText("" + geradoHoje.get(Calendar.DAY_OF_MONTH));
+    geradoHoje = new GregorianCalendar(hoje.get(Calendar.YEAR), hoje.get(Calendar.MONTH),
+        (hoje.get(Calendar.DAY_OF_MONTH) - aux + 10));
+    label22.setText("" + geradoHoje.get(Calendar.DAY_OF_MONTH));
+    geradoHoje = new GregorianCalendar(hoje.get(Calendar.YEAR), hoje.get(Calendar.MONTH),
+        (hoje.get(Calendar.DAY_OF_MONTH) - aux + 11));
+    label23.setText("" + geradoHoje.get(Calendar.DAY_OF_MONTH));
+    geradoHoje = new GregorianCalendar(hoje.get(Calendar.YEAR), hoje.get(Calendar.MONTH),
+        (hoje.get(Calendar.DAY_OF_MONTH) - aux + 12));
+    label24.setText("" + geradoHoje.get(Calendar.DAY_OF_MONTH));
+    geradoHoje = new GregorianCalendar(hoje.get(Calendar.YEAR), hoje.get(Calendar.MONTH),
+        (hoje.get(Calendar.DAY_OF_MONTH) - aux + 13));
+    label25.setText("" + geradoHoje.get(Calendar.DAY_OF_MONTH));
+    geradoHoje = new GregorianCalendar(hoje.get(Calendar.YEAR), hoje.get(Calendar.MONTH),
+        (hoje.get(Calendar.DAY_OF_MONTH) - aux + 14));
+    label26.setText("" + geradoHoje.get(Calendar.DAY_OF_MONTH));
+    geradoHoje = new GregorianCalendar(hoje.get(Calendar.YEAR), hoje.get(Calendar.MONTH),
+        (hoje.get(Calendar.DAY_OF_MONTH) - aux + 15));
+    label27.setText("" + geradoHoje.get(Calendar.DAY_OF_MONTH));
+    geradoHoje = new GregorianCalendar(hoje.get(Calendar.YEAR), hoje.get(Calendar.MONTH),
+        (hoje.get(Calendar.DAY_OF_MONTH) - aux + 16));
+    label31.setText("" + geradoHoje.get(Calendar.DAY_OF_MONTH));
+    geradoHoje = new GregorianCalendar(hoje.get(Calendar.YEAR), hoje.get(Calendar.MONTH),
+        (hoje.get(Calendar.DAY_OF_MONTH) - aux + 17));
+    label32.setText("" + geradoHoje.get(Calendar.DAY_OF_MONTH));
+    geradoHoje = new GregorianCalendar(hoje.get(Calendar.YEAR), hoje.get(Calendar.MONTH),
+        (hoje.get(Calendar.DAY_OF_MONTH) - aux + 18));
+    label33.setText("" + geradoHoje.get(Calendar.DAY_OF_MONTH));
+    geradoHoje = new GregorianCalendar(hoje.get(Calendar.YEAR), hoje.get(Calendar.MONTH),
+        (hoje.get(Calendar.DAY_OF_MONTH) - aux + 19));
+    label34.setText("" + geradoHoje.get(Calendar.DAY_OF_MONTH));
+    geradoHoje = new GregorianCalendar(hoje.get(Calendar.YEAR), hoje.get(Calendar.MONTH),
+        (hoje.get(Calendar.DAY_OF_MONTH) - aux + 20));
+    label35.setText("" + geradoHoje.get(Calendar.DAY_OF_MONTH));
+    geradoHoje = new GregorianCalendar(hoje.get(Calendar.YEAR), hoje.get(Calendar.MONTH),
+        (hoje.get(Calendar.DAY_OF_MONTH) - aux + 21));
+    label36.setText("" + geradoHoje.get(Calendar.DAY_OF_MONTH));
+    geradoHoje = new GregorianCalendar(hoje.get(Calendar.YEAR), hoje.get(Calendar.MONTH),
+        (hoje.get(Calendar.DAY_OF_MONTH) - aux + 22));
+    label37.setText("" + geradoHoje.get(Calendar.DAY_OF_MONTH));
+    geradoHoje = new GregorianCalendar(hoje.get(Calendar.YEAR), hoje.get(Calendar.MONTH),
+        (hoje.get(Calendar.DAY_OF_MONTH) - aux + 23));
+    label41.setText("" + geradoHoje.get(Calendar.DAY_OF_MONTH));
+    geradoHoje = new GregorianCalendar(hoje.get(Calendar.YEAR), hoje.get(Calendar.MONTH),
+        (hoje.get(Calendar.DAY_OF_MONTH) - aux + 24));
+    label42.setText("" + geradoHoje.get(Calendar.DAY_OF_MONTH));
+    geradoHoje = new GregorianCalendar(hoje.get(Calendar.YEAR), hoje.get(Calendar.MONTH),
+        (hoje.get(Calendar.DAY_OF_MONTH) - aux + 25));
+    label43.setText("" + geradoHoje.get(Calendar.DAY_OF_MONTH));
+    geradoHoje = new GregorianCalendar(hoje.get(Calendar.YEAR), hoje.get(Calendar.MONTH),
+        (hoje.get(Calendar.DAY_OF_MONTH) - aux + 26));
+    label44.setText("" + geradoHoje.get(Calendar.DAY_OF_MONTH));
+    geradoHoje = new GregorianCalendar(hoje.get(Calendar.YEAR), hoje.get(Calendar.MONTH),
+        (hoje.get(Calendar.DAY_OF_MONTH) - aux + 27));
+    label45.setText("" + geradoHoje.get(Calendar.DAY_OF_MONTH));
+    geradoHoje = new GregorianCalendar(hoje.get(Calendar.YEAR), hoje.get(Calendar.MONTH),
+        (hoje.get(Calendar.DAY_OF_MONTH) - aux + 28));
+    label46.setText("" + geradoHoje.get(Calendar.DAY_OF_MONTH));
+    geradoHoje = new GregorianCalendar(hoje.get(Calendar.YEAR), hoje.get(Calendar.MONTH),
+        (hoje.get(Calendar.DAY_OF_MONTH) - aux + 29));
+    label47.setText("" + geradoHoje.get(Calendar.DAY_OF_MONTH));
+    geradoHoje = new GregorianCalendar(hoje.get(Calendar.YEAR), hoje.get(Calendar.MONTH),
+        (hoje.get(Calendar.DAY_OF_MONTH) - aux + 30));
+    label51.setText("" + geradoHoje.get(Calendar.DAY_OF_MONTH));
+    geradoHoje = new GregorianCalendar(hoje.get(Calendar.YEAR), hoje.get(Calendar.MONTH),
+        (hoje.get(Calendar.DAY_OF_MONTH) - aux + 31));
+    label52.setText("" + geradoHoje.get(Calendar.DAY_OF_MONTH));
+    geradoHoje = new GregorianCalendar(hoje.get(Calendar.YEAR), hoje.get(Calendar.MONTH),
+        (hoje.get(Calendar.DAY_OF_MONTH) - aux + 32));
+    label53.setText("" + geradoHoje.get(Calendar.DAY_OF_MONTH));
+    geradoHoje = new GregorianCalendar(hoje.get(Calendar.YEAR), hoje.get(Calendar.MONTH),
+        (hoje.get(Calendar.DAY_OF_MONTH) - aux + 33));
+    label54.setText("" + geradoHoje.get(Calendar.DAY_OF_MONTH));
+    geradoHoje = new GregorianCalendar(hoje.get(Calendar.YEAR), hoje.get(Calendar.MONTH),
+        (hoje.get(Calendar.DAY_OF_MONTH) - aux + 34));
+    label55.setText("" + geradoHoje.get(Calendar.DAY_OF_MONTH));
+    geradoHoje = new GregorianCalendar(hoje.get(Calendar.YEAR), hoje.get(Calendar.MONTH),
+        (hoje.get(Calendar.DAY_OF_MONTH) - aux + 35));
+    label56.setText("" + geradoHoje.get(Calendar.DAY_OF_MONTH));
+    geradoHoje = new GregorianCalendar(hoje.get(Calendar.YEAR), hoje.get(Calendar.MONTH),
+        (hoje.get(Calendar.DAY_OF_MONTH) - aux + 36));
+    label57.setText("" + geradoHoje.get(Calendar.DAY_OF_MONTH));
 
   }
 }

@@ -1,0 +1,13 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "java",
+			"name": "Launch App",
+			"request": "launch",
+			"vmArgs": "--module-path C:\\Users\\Pichau\\Documents\\Programação\\Java\\javafx-sdk-11.0.2\\lib --add-modules javafx.controls,javafx.fxml",
+			"mainClass": "App",
+			"projectName": "Calendario_bea94615"
+		}
+	]
+}

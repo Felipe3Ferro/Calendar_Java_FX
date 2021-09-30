@@ -25,13 +25,13 @@
       </AnchorPane>
       <AnchorPane layoutX="230.0" layoutY="23.0" prefHeight="426.0" prefWidth="773.0" style="-fx-background-color: #212936; -fx-background-radius: 5;">
          <children>
-            <Label layoutX="355.0" layoutY="25.0" text="Mes Ano" textFill="#9e9885">
+            <Label fx:id="labelMesAno" layoutX="355.0" layoutY="25.0" text="Mes Ano" textFill="#9e9885">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font></Label>
             <VBox layoutX="5.0" layoutY="60.0" prefHeight="360.0" prefWidth="109.0">
                <children>
-                  <Label fx:id="labelSeg" alignment="CENTER" prefHeight="60.0" prefWidth="109.0" text="Seg" textAlignment="CENTER" textFill="#9e9885">
+                  <Label fx:id="label2" alignment="CENTER" prefHeight="60.0" prefWidth="109.0" text="2" textAlignment="CENTER" textFill="#9e9885">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -85,7 +85,7 @@
             </VBox>
             <VBox layoutX="114.0" layoutY="60.0" prefHeight="360.0" prefWidth="109.0">
                <children>
-                  <Label fx:id="labelTer" alignment="CENTER" prefHeight="60.0" prefWidth="109.0" text="Ter" textFill="#9e9885">
+                  <Label fx:id="label3" alignment="CENTER" prefHeight="60.0" prefWidth="109.0" text="3" textFill="#9e9885">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -139,7 +139,7 @@
             </VBox>
             <VBox layoutX="223.0" layoutY="60.0" prefHeight="360.0" prefWidth="109.0">
                <children>
-                  <Label fx:id="labelQua" alignment="CENTER" prefHeight="60.0" prefWidth="109.0" text="Qua" textFill="#9e9885">
+                  <Label fx:id="label4" alignment="CENTER" prefHeight="60.0" prefWidth="109.0" text="4" textFill="#9e9885">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -193,7 +193,7 @@
             </VBox>
             <VBox layoutX="332.0" layoutY="60.0" prefHeight="360.0" prefWidth="109.0">
                <children>
-                  <Label fx:id="labelQui" alignment="CENTER" prefHeight="60.0" prefWidth="109.0" text="Qui" textFill="#9e9885">
+                  <Label fx:id="label5" alignment="CENTER" prefHeight="60.0" prefWidth="109.0" text="5" textFill="#9e9885">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -247,7 +247,7 @@
             </VBox>
             <VBox layoutX="441.0" layoutY="60.0" prefHeight="360.0" prefWidth="109.0">
                <children>
-                  <Label fx:id="labelSex" alignment="CENTER" prefHeight="60.0" prefWidth="109.0" text="Sex" textFill="#9e9885">
+                  <Label fx:id="label6" alignment="CENTER" prefHeight="60.0" prefWidth="109.0" text="6" textFill="#9e9885">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -301,7 +301,7 @@
             </VBox>
             <VBox layoutX="550.0" layoutY="60.0" prefHeight="360.0" prefWidth="109.0">
                <children>
-                  <Label fx:id="labelSab" alignment="CENTER" prefHeight="60.0" prefWidth="109.0" text="Sab" textFill="#9e9885">
+                  <Label fx:id="label7" alignment="CENTER" prefHeight="60.0" prefWidth="109.0" text="7" textFill="#9e9885">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -355,7 +355,7 @@
             </VBox>
             <VBox layoutX="659.0" layoutY="60.0" prefHeight="360.0" prefWidth="109.0">
                <children>
-                  <Label fx:id="labelDom" alignment="CENTER" prefHeight="60.0" prefWidth="109.0" text="Dom" textFill="#9e9885">
+                  <Label fx:id="label1" alignment="CENTER" prefHeight="60.0" prefWidth="109.0" text="1" textFill="#9e9885">
                      <font>
                         <Font size="14.0" />
                      </font>
